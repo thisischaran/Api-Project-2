@@ -17,7 +17,6 @@ class userlogin(MethodView):
     @blp.response(201,userloginresponseschema)
     def post(self,user_data):
         reguser = dbusertable(**user_data)
-        print(user_data)
 
         try:
             print("i have come here")
