@@ -1,0 +1,7 @@
+flask
+flask-smorest
+flask_jwt_extended
+flask-dotenv
+passlib
+sqlalchemy
+flask-sqlalchemy
