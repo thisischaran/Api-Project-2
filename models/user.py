@@ -3,14 +3,16 @@
 from db import db
 
 
-class dbusertable(db.model):
+class dbusertable(db.Model):
     __tablename__ = "users"
 
-    userid = db.Column(db.String(30), nullable=False)
+    id = db.Column(db.Integer, primary_key = True)
+    userid = db.Column(db.String(30), unique=True,nullable=False, )
     password = db.Column(db.String(200), nullable= False)
 
 
-class dblogouttable(db.model):
+class dblogouttable(db.Model):
     __tablename__ = "logout"
 
+    id = db.Column(db.Integer, primary_key = True)
     tokens =db.Column(db.String(200), nullable = False)
